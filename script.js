@@ -5,7 +5,6 @@ const todoInputAdd = document.querySelector('.todo-input-add');
 const todoListSection = document.querySelector('.todo-list');
 const taskItemAdd = document.querySelector('.task-item-add');
 
-// Data being pushed;
 const todoListData = [];
 
 const createTodoElement = function (value) {
@@ -25,7 +24,6 @@ const createTodoElement = function (value) {
     </div>`;
   todoListSection.insertAdjacentHTML('beforeend', html);
 
-  // Add the new todo item into the DOM
   todoInput.value = '';
 };
 
