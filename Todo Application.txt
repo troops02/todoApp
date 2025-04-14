@@ -1,0 +1,17 @@
+Todo Application
+
+-User Input ✔️
+-Clicks to add to-do ✔️
+-when added. Time shows - {
+    when add todo it will show the time .
+    when added imidiately it will show 1s ago 
+}
+
+
+// const check = document.querySelector('.check-group');
+// let group = true;
+
+// let str = (group += `${group ? '! there is a group' : `! there is no group`} `);
+// console.log(str);
+
+// check.textContent = str;
