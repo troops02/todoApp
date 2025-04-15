@@ -8,9 +8,10 @@ const taskItemAdd = document.querySelector('.task-item-add');
 const todoListData = [];
 
 const createTodoElement = function (value) {
+  const input = value.replace(value[0], value[0].toUpperCase());
   const html = `<div class="todo-items">
       <div class="todo-items-task">
-        <p>${value}</p>
+        <p>${input}</p>
       </div>
       <div class="todo-showcase">
         <div>
