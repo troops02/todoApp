@@ -35,7 +35,7 @@ todoInputAdd.addEventListener('click', function () {
     alert('Add Todo');
     return;
   }
-  
+
   taskId++;
   createTodoElement(todoInputValue);
 });
@@ -70,7 +70,6 @@ todoListSection.addEventListener('click', function (e) {
 
 editTaskBtn.addEventListener('click', function () {
   const newText = editInput.value.trim();
-  console.log(newText);
   if (!newText) {
     alert('Eidit task');
     return;
