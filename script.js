@@ -6,7 +6,8 @@ const todoListSection = document.querySelector('.todo-list');
 const taskItemAdd = document.querySelector('.task-item-add');
 const overlayEl = document.querySelector('.overlay');
 const editTaskBtn = document.querySelector('.change-task');
-const editInput = document.querySelector('.edit-input-field');
+const editInput = document.querySelector('#edit-input-field');
+const textFieldCon = document.querySelector('.text-field');
 
 const todoListData = [];
 
@@ -46,6 +47,7 @@ todoInputAdd.addEventListener('click', function () {
 
 const toggleOverly = () => {
   overlayEl.classList.toggle('hidden');
+  textFieldCon.classList.toggle('hidden');
 };
 
 todoListSection.addEventListener('click', function (e) {
@@ -61,7 +63,10 @@ todoListSection.addEventListener('click', function (e) {
 });
 
 editTaskBtn.addEventListener('click', function () {
-  console.log('task changed');
+  toggleOverly();
+  const textField = editInput.value.trim();
+  if (!textField) {
+    alert('Eidit task');
+    return;
+  }
 });
-
-overlayEl.addEventListener('click', toggleOverly);
