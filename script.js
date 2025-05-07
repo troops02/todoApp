@@ -9,14 +9,12 @@ const editTaskBtn = document.querySelector('.change-task');
 const editInput = document.querySelector('#edit-input-field');
 const textFieldCon = document.querySelector('.text-field');
 
-const todoListData = [];
 let taskId = 0;
 
 const createTodoElement = function (value) {
-  const input = value.replace(value[0], value[0].toUpperCase());
   const html = `<div class="todo-items" data-id='${taskId}'>
       <div class="todo-items-task">
-        <p>${input}</p>
+        <p>${value}</p>
       </div>
       <div class="todo-showcase">
         <div>
@@ -37,10 +35,9 @@ todoInputAdd.addEventListener('click', function () {
     alert('Add Todo');
     return;
   }
+  
   taskId++;
   createTodoElement(todoInputValue);
-  todoListData.push(todoInputValue);
-  console.log(todoListData);
 });
 
 const toggleOverlay = () => {
