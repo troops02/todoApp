@@ -71,7 +71,7 @@ todoListSection.addEventListener('click', function (e) {
 editTaskBtn.addEventListener('click', function () {
   const newText = editInput.value.trim();
   if (!newText) {
-    alert('Eidit task');
+    alert('Edit task');
     return;
   }
 
